@@ -26,5 +26,10 @@ public struct RecognizeCallback {
 
     /// Invoked when an error or warning occurs.
     public var onError: ((WatsonError) -> Void)?
+    
+    /// Invoked with microphone audio when a recording audio queue buffer has been filled.
+    public var onMicrophoneData: ((Data) -> Void)?
 
+    /// Invoked every 0.025s when recording with the average dB power of the microphone.
+    public var onPowerData: ((Float32) -> Void)?
 }

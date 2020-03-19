@@ -221,6 +221,8 @@ extension SpeechToText {
         // set callbacks
         session.onResults = callback.onResults
         session.onError = callback.onError
+        session.onMicrophoneData = callback.onMicrophoneData
+        session.onPowerData = callback.onPowerData
 
         // start recognition request
         session.connect()
