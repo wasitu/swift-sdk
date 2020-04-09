@@ -172,6 +172,8 @@ extension SpeechToText {
         compress: Bool = true,
         configureSession: Bool = true,
         headers: [String: String]? = nil,
+        endOfPhraseSilenceTime: Double? = nil,
+        splitTranscriptAtPhraseEnd: Bool? = nil,
         callback: RecognizeCallback)
     {
         // make sure the AVAudioSession shared instance is properly configured
@@ -199,6 +201,8 @@ extension SpeechToText {
             languageCustomizationID: languageCustomizationID,
             acousticCustomizationID: acousticCustomizationID,
             learningOptOut: learningOptOut,
+            endOfPhraseSilenceTime: endOfPhraseSilenceTime,
+            splitTranscriptAtPhraseEnd: splitTranscriptAtPhraseEnd,
             customerID: customerID
         )
 

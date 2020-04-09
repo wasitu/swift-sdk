@@ -26,7 +26,7 @@ public struct RecognizeCallback {
 
     /// Invoked when an error or warning occurs.
     public var onError: ((WatsonError) -> Void)?
-    
+
     /// Invoked with microphone audio when a recording audio queue buffer has been filled.
     public var onMicrophoneData: ((Data) -> Void)?
 
