@@ -178,4 +178,6 @@ internal class SpeechToTextRecorder {
     }
 }
 
+extension SpeechToTextRecorder: AudioRecorder {}
+
 #endif

@@ -120,7 +120,7 @@ public class SpeechToTextSession {
         return socket
     }()
 
-    private var recorder: SpeechToTextRecorder
+    private var recorder: AudioRecorder
     private var encoder: SpeechToTextEncoder
     private var compress: Bool = true
     private let domain = "com.ibm.watson.developer-cloud.SpeechToTextV1"
@@ -144,7 +144,8 @@ public class SpeechToTextSession {
         learningOptOut: Bool? = nil,
         endOfPhraseSilenceTime: Double? = nil,
         splitTranscriptAtPhraseEnd: Bool? = nil,
-        customerID: String? = nil)
+        customerID: String? = nil,
+        audioFileURL: URL? = nil)
     {
         self.authenticator = authenticator
         self.model = model
@@ -156,7 +157,11 @@ public class SpeechToTextSession {
         self.splitTranscriptAtPhraseEnd = splitTranscriptAtPhraseEnd
         self.customerID = customerID
 
-        recorder = SpeechToTextRecorder()
+        if let url = audioFileURL {
+            recorder = PlayingAudioRecorder(url: url)
+        } else {
+            recorder = SpeechToTextRecorder()
+        }
         // swiftlint:disable:next force_try
         encoder = try! SpeechToTextEncoder(
             format: recorder.format,

@@ -174,6 +174,7 @@ extension SpeechToText {
         headers: [String: String]? = nil,
         endOfPhraseSilenceTime: Double? = nil,
         splitTranscriptAtPhraseEnd: Bool? = nil,
+        audioFileURL: URL? = nil,
         callback: RecognizeCallback)
     {
         // make sure the AVAudioSession shared instance is properly configured
@@ -191,7 +192,9 @@ extension SpeechToText {
 
         // validate settings
         var settings = settings
-        settings.contentType = compress ? "audio/ogg;codecs=opus" : "audio/l16;rate=16000;channels=1"
+        if compress {
+            settings.contentType = "audio/ogg;codecs=opus"
+        }
 
         // create SpeechToTextSession
         let session = SpeechToTextSession(
@@ -203,7 +206,8 @@ extension SpeechToText {
             learningOptOut: learningOptOut,
             endOfPhraseSilenceTime: endOfPhraseSilenceTime,
             splitTranscriptAtPhraseEnd: splitTranscriptAtPhraseEnd,
-            customerID: customerID
+            customerID: customerID,
+            audioFileURL: audioFileURL
         )
 
         // set url

@@ -25,6 +25,8 @@
 		12F800581DF71AD9006851D6 /* WatsonCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C7B3C1D8C960300CD97FA /* WatsonCredentials.swift */; };
 		12F8005C1DF71BA1006851D6 /* Discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F8005B1DF71BA1006851D6 /* Discovery.swift */; };
 		12F8005E1DF71BED006851D6 /* DiscoveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F8005D1DF71BED006851D6 /* DiscoveryTests.swift */; };
+		432201D92447C25800C689C2 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432201D82447C25700C689C2 /* AudioRecorder.swift */; };
+		432201DB2447C33000C689C2 /* PlayingAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432201DA2447C33000C689C2 /* PlayingAudioRecorder.swift */; };
 		5F2C5BE622E9FA0900A7628D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C5BE322E9FA0900A7628D /* SearchResult.swift */; };
 		5F2C5BE722E9FA0900A7628D /* SearchResultHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C5BE422E9FA0900A7628D /* SearchResultHighlight.swift */; };
 		5F2C5BE822E9FA0900A7628D /* SearchResultMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C5BE522E9FA0900A7628D /* SearchResultMetadata.swift */; };
@@ -1010,6 +1012,8 @@
 		12F800481DF71921006851D6 /* DiscoveryV1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiscoveryV1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F8005B1DF71BA1006851D6 /* Discovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discovery.swift; sourceTree = "<group>"; };
 		12F8005D1DF71BED006851D6 /* DiscoveryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryTests.swift; sourceTree = "<group>"; };
+		432201D82447C25700C689C2 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		432201DA2447C33000C689C2 /* PlayingAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingAudioRecorder.swift; sourceTree = "<group>"; };
 		5F2C5BE322E9FA0900A7628D /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		5F2C5BE422E9FA0900A7628D /* SearchResultHighlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultHighlight.swift; sourceTree = "<group>"; };
 		5F2C5BE522E9FA0900A7628D /* SearchResultMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultMetadata.swift; sourceTree = "<group>"; };
@@ -2225,6 +2229,8 @@
 				7A9EC8091D79B75100507725 /* SpeechToTextSession.swift */,
 				7A9EC81F1D79D7E300507725 /* SpeechToTextSocket.swift */,
 				7A9EC8211D79D8F300507725 /* SpeechToTextState.swift */,
+				432201D82447C25700C689C2 /* AudioRecorder.swift */,
+				432201DA2447C33000C689C2 /* PlayingAudioRecorder.swift */,
 			);
 			path = WebSockets;
 			sourceTree = "<group>";
@@ -5139,6 +5145,7 @@
 				68F7FF0C207D458900E84DBF /* WordAlternativeResult.swift in Sources */,
 				68F7FF0D207D458900E84DBF /* WordError.swift in Sources */,
 				68F7FF15207D458900E84DBF /* Corpus.swift in Sources */,
+				432201DB2447C33000C689C2 /* PlayingAudioRecorder.swift in Sources */,
 				68F7FF11207D458900E84DBF /* CustomWords.swift in Sources */,
 				68F7FF10207D458900E84DBF /* LanguageModels.swift in Sources */,
 				92261E8E21EFAA9B00A1A620 /* Grammar.swift in Sources */,
@@ -5150,6 +5157,7 @@
 				CA6E525622A70E29002965D9 /* AudioMetricsDetails.swift in Sources */,
 				68F7FF02207D458900E84DBF /* SpeechModel.swift in Sources */,
 				68F7FF24207D47BD00E84DBF /* RecognitionState.swift in Sources */,
+				432201D92447C25800C689C2 /* AudioRecorder.swift in Sources */,
 				68F7FEFC207D458900E84DBF /* AudioResources.swift in Sources */,
 				CA6E525A22A70E29002965D9 /* TrainingWarning.swift in Sources */,
 				CA6E525522A70E29002965D9 /* AudioMetrics.swift in Sources */,
