@@ -175,6 +175,7 @@ extension SpeechToText {
         endOfPhraseSilenceTime: Double? = nil,
         splitTranscriptAtPhraseEnd: Bool? = nil,
         audioFileURL: URL? = nil,
+        speakerLabels: Bool? = nil,
         callback: RecognizeCallback)
     {
         // make sure the AVAudioSession shared instance is properly configured
@@ -207,7 +208,8 @@ extension SpeechToText {
             endOfPhraseSilenceTime: endOfPhraseSilenceTime,
             splitTranscriptAtPhraseEnd: splitTranscriptAtPhraseEnd,
             customerID: customerID,
-            audioFileURL: audioFileURL
+            audioFileURL: audioFileURL,
+            speakerLabels: speakerLabels
         )
 
         // set url

@@ -103,7 +103,8 @@ public class SpeechToTextSession {
             endOfPhraseSilenceTime: endOfPhraseSilenceTime,
             splitTranscriptAtPhraseEnd: splitTranscriptAtPhraseEnd,
             learningOptOut: learningOptOut,
-            customerID: customerID
+            customerID: customerID,
+            speakerLabels: speakerLabels
         )!
         var socket = SpeechToTextSocket(
             url: url,
@@ -134,6 +135,7 @@ public class SpeechToTextSession {
     private let customerID: String?
     private let endOfPhraseSilenceTime: Double?
     private let splitTranscriptAtPhraseEnd: Bool?
+    private let speakerLabels: Bool?
 
     public init(
         authenticator: Authenticator,
@@ -145,7 +147,8 @@ public class SpeechToTextSession {
         endOfPhraseSilenceTime: Double? = nil,
         splitTranscriptAtPhraseEnd: Bool? = nil,
         customerID: String? = nil,
-        audioFileURL: URL? = nil)
+        audioFileURL: URL? = nil,
+        speakerLabels: Bool? = nil)
     {
         self.authenticator = authenticator
         self.model = model
@@ -156,6 +159,7 @@ public class SpeechToTextSession {
         self.endOfPhraseSilenceTime = endOfPhraseSilenceTime
         self.splitTranscriptAtPhraseEnd = splitTranscriptAtPhraseEnd
         self.customerID = customerID
+        self.speakerLabels = speakerLabels
 
         if let url = audioFileURL {
             recorder = PlayingAudioRecorder(url: url)
